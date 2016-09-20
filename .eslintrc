@@ -1,0 +1,63 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "commonjs": true,
+    "worker": true,
+    "mocha": true,
+    "mongo": true,
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "destructuring": true,
+    "modules": true,
+    "spread": true,
+    "templateStrings": true,
+    "forOf": true
+  },
+  "settings": {
+    "ecmascript": 6,
+    "import/resolver": "webpack"
+  },
+  "rules": {
+    "no-undef": 2,
+    "no-unused-vars": 2,
+    "camelcase": 0,
+    "no-underscore-dangle": 0,
+
+    "semi": 2,
+    "no-unreachable": 2,
+
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-empty": 2,
+    "no-extra-boolean-cast": 2,
+    "no-extra-semi": 2,
+    "no-func-assign": 2,
+    "no-inner-declarations": 2,
+    "no-irregular-whitespace": 2,
+    "no-negated-in-lhs": 2,
+    "no-sparse-arrays": 2,
+    "no-unexpected-multiline": 2,
+    "use-isnan": 2,
+    "valid-jsdoc": 2,
+    "valid-typeof": 2,
+
+    "block-scoped-var": 2,
+    "curly": [2, "multi-line"],
+    "default-case": 2,
+    "no-alert": 2,
+    "no-caller": 2,
+    "no-else-return": 2,
+    "no-labels": 2,
+    "no-eq-null": 2,
+    "no-eval": 2
+  },
+  "syntax_map": {
+    "JavaScript (Babel)": "javascript",
+  }
+}
