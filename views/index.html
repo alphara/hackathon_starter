@@ -12,10 +12,64 @@
         text-decoration: none;
         color: black;
       }
+      #box {
+        width: 380px;
+        height: 100px;
+
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        margin: auto;
+        color: gray;
+
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      #years {
+        font-size: 100px;
+        float: left;
+        color: black;
+        font-weight: bold;
+      }
+      #fraction {
+        padding-top: 12px;
+        font-size: 40px;
+        float: left;
+        color: black;
+        font-weight: bold;
+      }
     </style>
+    <script>
+      var intervalID = setInterval(function(){
+        var currentDate = new Date();
+
+        var fullYear = currentDate.getFullYear();
+        if (currentDate.getMonth() < 11 && currentDate.getDay() < 9) {
+          // cause I didn't celebrate my birthday in current year
+          --fullYear;
+        }
+        var years = fullYear - 1984;
+
+        var prevBirthday = new Date(fullYear, 11, 9);
+        var nextBirthday = new Date(fullYear+1, 11, 9);
+
+        var fraction =
+          (currentDate.valueOf() - prevBirthday.valueOf()) /
+          (nextBirthday.valueOf() - prevBirthday.valueOf());
+        var fractionStr = fraction.toString().slice(1, 11);
+
+        document.getElementById('years').innerHTML = years;
+        document.getElementById('fraction').innerHTML = fractionStr;
+      }, 1);
+    </script>
   </head>
-  <body style="">
-    <div id="content"></div>
-    <script src="build/bundle.js"></script>
+  <body>
+    <div id="box">
+      <div>AGE</div>
+      <div id="years"></div><div id="fraction"></div>
+    </div>
   </body>
 </html>

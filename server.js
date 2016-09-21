@@ -27,7 +27,7 @@ app.get('/hey', (req, res) => {
 });
 
 app.get('/data', (req, res) => {
-  res.json({ data: 'Hey', color: 'green'});
+  res.json({ data: 'Hello Marcus!', color: 'green'});
 });
 
 // for rhcloud
